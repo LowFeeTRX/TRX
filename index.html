@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LowFeeTRX – Reduce TRC20 USDT Transaction Fees with TRON Energy Rental</title>
+  <meta name="description" content="Send 0.1 TRX to receive delegated TRON energy and lower your USDT TRC20 transfer fees. Simple, fast and secure. Hong Kong based service.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 bg-white border-b z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2 text-2xl font-bold text-emerald-800">
+        LowFeeTRX <span class="text-3xl">⚡</span>
+      </div>
+      
+      <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#product" class="hover:text-emerald-600">Product</a>
+        <a href="#how" class="hover:text-emerald-600">How It Works</a>
+        <a href="#faq" class="hover:text-emerald-600">FAQ</a>
+        <a href="#contact" class="hover:text-emerald-600">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="flex gap-1 text-xs font-medium border rounded-full px-3 py-1">
+          <button onclick="switchLang('en')" class="lang-btn active px-3 py-1 rounded-full" id="lang-en">EN</button>
+          <button onclick="switchLang('zh-tw')" class="lang-btn px-3 py-1 rounded-full" id="lang-zh-tw">繁</button>
+          <button onclick="switchLang('zh-cn')" class="lang-btn px-3 py-1 rounded-full" id="lang-zh-cn">简</button>
+        </div>
+        <a href="#contact" class="bg-emerald-600 text-white px-5 py-2 rounded-xl text-sm font-medium hover:bg-emerald-700">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-20 bg-gradient-to-b from-emerald-50 to-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 id="hero-title" class="text-5xl font-bold leading-tight mb-6">Reduce TRC20 USDT Transaction Fees Efficiently</h1>
+      <p id="hero-subtitle" class="text-xl text-gray-600 mb-10">Send only 0.1 TRX to receive delegated TRON energy and lower your next USDT TRC20 transfer fees.</p>
+      
+      <div class="bg-white border rounded-3xl p-8 max-w-xl mx-auto shadow-sm">
+        <p class="text-emerald-700 font-medium mb-4">TRON Energy Rental Address</p>
+        <div class="flex items-center justify-between bg-gray-100 rounded-2xl p-4 text-lg font-mono break-all">
+          <span id="address">TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU</span>
+          <button onclick="copyAddress()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <p id="copy-note" class="text-sm text-gray-500 mt-4">Send 0.1 TRX to this address • Use within 15 minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-center mb-12">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-6xl mb-4">1️⃣</div>
+          <h3 class="font-semibold mb-2">Copy Address</h3>
+          <p class="text-gray-600">Copy the TRON energy address above</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl mb-4">2️⃣</div>
+          <h3 class="font-semibold mb-2">Send 0.1 TRX</h3>
+          <p class="text-gray-600">Send 0.1 TRX to the address</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl mb-4">3️⃣</div>
+          <h3 class="font-semibold mb-2">Use Energy</h3>
+          <p class="text-gray-600">Use the delegated energy for your next USDT TRC20 transfer with lower fees</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-emerald-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-8">Ready to Save Fees?</h2>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://t.me/LowFeeTRX" target="_blank" class="bg-white border hover:border-emerald-600 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
+          <i class="fab fa-telegram text-4xl text-emerald-600"></i>
+          Telegram @LowFeeTRX
+        </a>
+        <a href="mailto:LowFeeTRX@gmail.com" class="bg-white border hover:border-emerald-600 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
+          <i class="fas fa-envelope text-4xl text-emerald-600"></i>
+          LowFeeTRX@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-xl font-semibold text-white mb-2">LowFeeTRX</p>
+      <p class="mb-6">Hong Kong based TRON Energy Rental Service</p>
+      <p class="text-sm">© 2026 LowFeeTRX | Hong Kong</p>
+      <p class="text-xs mt-6">This website provides blockchain utility tools only. It does not offer financial advice or investment services.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyAddress() {
+      const addr = "TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU";
+      navigator.clipboard.writeText(addr).then(() => {
+        const btns = document.querySelectorAll('button');
+        const copyBtn = Array.from(btns).find(b => b.textContent.includes('Copy'));
+        if (copyBtn) {
+          const original = copyBtn.innerHTML;
+          copyBtn.innerHTML = '✅ Copied!';
+          setTimeout(() => copyBtn.innerHTML = original, 2000);
+        }
+      });
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      
+      if (lang === 'en') {
+        window.location.reload();
+      } else if (lang === 'zh-tw') {
+        window.location.href = 'zh-tw.html';
+      } else if (lang === 'zh-cn') {
+        window.location.href = 'zh-cn.html';
+      }
+    }
+
+    // Tailwind script already loaded
+    console.log("%cLowFeeTRX website loaded successfully", "color:#10b981; font-weight:bold");
+  </script>
+</body>
+</html>
