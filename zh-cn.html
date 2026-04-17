@@ -63,7 +63,7 @@
         <p class="text-emerald-700 font-medium mb-3 text-base">TRON 能量租赁地址</p>
         <div class="flex flex-col sm:flex-row items-center gap-3 bg-gray-100 rounded-2xl p-4 text-base font-mono break-all">
           <span class="flex-1 text-center sm:text-left">TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU</span>
-          <button onclick="copyAddress()" 
+          <button onclick="copyAddress(event)" 
                   class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-2xl flex items-center justify-center gap-2 text-base font-medium">
             <i class="fas fa-copy"></i> 复制地址
           </button>
@@ -174,10 +174,10 @@
   </footer>
 
   <script>
-    function copyAddress() {
+    function copyAddress(e) {
       const addr = "TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU";
       navigator.clipboard.writeText(addr).then(() => {
-        const btn = event.currentTarget;
+        const btn = e.currentTarget;
         const original = btn.innerHTML;
         btn.innerHTML = '✅ 已复制！';
         setTimeout(() => btn.innerHTML = original, 2000);
