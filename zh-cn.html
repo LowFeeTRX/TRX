@@ -8,42 +8,43 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-white text-gray-900">
+
   <!-- Header -->
-  <header class="sticky top-0 bg-white border-b z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <header class="sticky top-0 bg-white border-b shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
       <div class="flex items-center gap-2 text-2xl font-bold text-emerald-800">
         LowFeeTRX <span class="text-3xl">⚡</span>
       </div>
+      
       <nav class="hidden md:flex gap-8 text-sm font-medium">
-        <a href="#product" class="hover:text-emerald-600">产品</a>
         <a href="#how" class="hover:text-emerald-600">操作步骤</a>
-        <a href="#faq" class="hover:text-emerald-600">常见问题</a>
         <a href="#contact" class="hover:text-emerald-600">联系我们</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <div class="flex gap-1 text-xs font-medium border rounded-full px-3 py-1">
-          <button onclick="switchLang('en')" class="lang-btn px-3 py-1 rounded-full" id="lang-en">EN</button>
-          <button onclick="switchLang('zh-tw')" class="lang-btn px-3 py-1 rounded-full" id="lang-zh-tw">繁</button>
-          <button onclick="switchLang('zh-cn')" class="lang-btn active px-3 py-1 rounded-full" id="lang-zh-cn">简</button>
+
+      <div class="flex items-center gap-2">
+        <div class="flex gap-1 text-xs border rounded-full px-2 py-1">
+          <button onclick="switchLang('en')" class="lang-btn px-3 py-1 rounded-full text-xs" id="lang-en">EN</button>
+          <button onclick="switchLang('zh-tw')" class="lang-btn px-3 py-1 rounded-full text-xs" id="lang-zh-tw">繁</button>
+          <button onclick="switchLang('zh-cn')" class="lang-btn active px-3 py-1 rounded-full text-xs" id="lang-zh-cn">简</button>
         </div>
-        <a href="#contact" class="bg-emerald-600 text-white px-5 py-2 rounded-xl text-sm font-medium hover:bg-emerald-700">立即开始</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="py-20 bg-gradient-to-b from-emerald-50 to-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-5xl font-bold leading-tight mb-6">降低 USDT TRC20 转账手续费</h1>
-      <p class="text-xl text-gray-600 mb-10">只需发送 0.1 TRX，即可获得 TRON 能量委托，大幅降低下一笔 USDT TRC20 转账手续费。</p>
+  <section class="pt-12 pb-16 bg-gradient-to-b from-emerald-50 to-white text-center px-5">
+    <div class="max-w-xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">降低 USDT TRC20 转账手续费</h1>
+      <p class="text-lg text-gray-600 mb-8">只需发送 0.1 TRX，即可获得 TRON 能量委托，大幅降低下一笔 USDT TRC20 转账手续费。</p>
       
-      <div class="bg-white border rounded-3xl p-8 max-w-xl mx-auto shadow-sm">
-        <p class="text-emerald-700 font-medium mb-4">能量租赁地址</p>
-        <div class="flex items-center justify-between bg-gray-100 rounded-2xl p-4 text-lg font-mono break-all">
-          <span>TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU</span>
-          <button onclick="copyAddress()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
-            <i class="fas fa-copy"></i> 复制
+      <div class="bg-white border-2 border-emerald-200 rounded-3xl p-6 md:p-8 shadow-sm">
+        <p class="text-emerald-700 font-medium mb-3 text-base">TRON 能量租赁地址</p>
+        <div class="flex flex-col sm:flex-row items-center gap-3 bg-gray-100 rounded-2xl p-4 text-base font-mono break-all">
+          <span class="flex-1 text-center sm:text-left">TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU</span>
+          <button onclick="copyAddress()" 
+                  class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-2xl flex items-center justify-center gap-2 text-base font-medium">
+            <i class="fas fa-copy"></i> 复制地址
           </button>
         </div>
         <p class="text-sm text-gray-500 mt-4">发送 0.1 TRX 到此地址 • 建议 15 分钟内使用</p>
@@ -52,23 +53,23 @@
   </section>
 
   <!-- How It Works -->
-  <section id="how" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-center mb-12">操作步骤</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="text-6xl mb-4">1️⃣</div>
-          <h3 class="font-semibold mb-2">复制地址</h3>
+  <section id="how" class="py-16 px-5 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-10">操作步骤</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center bg-gray-50 rounded-3xl p-8">
+          <div class="text-5xl mb-6">1️⃣</div>
+          <h3 class="font-semibold text-xl mb-3">复制地址</h3>
           <p class="text-gray-600">复制上方能量地址</p>
         </div>
-        <div class="text-center">
-          <div class="text-6xl mb-4">2️⃣</div>
-          <h3 class="font-semibold mb-2">发送 0.1 TRX</h3>
+        <div class="text-center bg-gray-50 rounded-3xl p-8">
+          <div class="text-5xl mb-6">2️⃣</div>
+          <h3 class="font-semibold text-xl mb-3">发送 0.1 TRX</h3>
           <p class="text-gray-600">发送到上方地址</p>
         </div>
-        <div class="text-center">
-          <div class="text-6xl mb-4">3️⃣</div>
-          <h3 class="font-semibold mb-2">使用能量</h3>
+        <div class="text-center bg-gray-50 rounded-3xl p-8">
+          <div class="text-5xl mb-6">3️⃣</div>
+          <h3 class="font-semibold text-xl mb-3">使用能量</h3>
           <p class="text-gray-600">用能量进行低手续费 USDT TRC20 转账</p>
         </div>
       </div>
@@ -76,15 +77,17 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-emerald-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
+  <section id="contact" class="py-16 px-5 bg-emerald-50">
+    <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-semibold mb-8">准备好开始省钱了吗？</h2>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://t.me/LowFeeTRX" target="_blank" class="bg-white border hover:border-emerald-600 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-md mx-auto">
+        <a href="https://t.me/LowFeeTRX" target="_blank" 
+           class="flex-1 bg-white border-2 border-emerald-600 hover:bg-emerald-50 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
           <i class="fab fa-telegram text-4xl text-emerald-600"></i>
           Telegram @LowFeeTRX
         </a>
-        <a href="mailto:LowFeeTRX@gmail.com" class="bg-white border hover:border-emerald-600 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
+        <a href="mailto:LowFeeTRX@gmail.com" 
+           class="flex-1 bg-white border-2 border-emerald-600 hover:bg-emerald-50 px-8 py-6 rounded-3xl flex items-center justify-center gap-4 text-xl">
           <i class="fas fa-envelope text-4xl text-emerald-600"></i>
           LowFeeTRX@gmail.com
         </a>
@@ -93,25 +96,27 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-xl font-semibold text-white mb-2">LowFeeTRX</p>
+  <footer class="bg-gray-900 text-gray-400 py-12 px-5">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-2xl font-semibold text-white mb-2">LowFeeTRX</p>
       <p class="mb-6">香港 TRON 能量租赁服务</p>
       <p class="text-sm">© 2026 LowFeeTRX | Hong Kong</p>
-      <p class="text-xs mt-6">本网站仅提供区块链工具，不提供金融建议或投资服务。</p>
+      <p class="text-xs mt-8">本网站仅提供区块链工具，不提供金融建议或投资服务。</p>
     </div>
   </footer>
 
   <script>
     function copyAddress() {
-      navigator.clipboard.writeText("TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU").then(() => {
+      const addr = "TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU";
+      navigator.clipboard.writeText(addr).then(() => {
         alert("✅ 已复制地址！");
       });
     }
+
     function switchLang(lang) {
       if (lang === 'en') window.location.href = 'index.html';
-      if (lang === 'zh-tw') window.location.href = 'zh-tw.html';
-      if (lang === 'zh-cn') window.location.href = 'zh-cn.html';
+      else if (lang === 'zh-tw') window.location.href = 'zh-tw.html';
+      else if (lang === 'zh-cn') window.location.href = 'zh-cn.html';
     }
   </script>
 </body>
