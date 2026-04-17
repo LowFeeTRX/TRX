@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO Title & Description -->
   <title>LowFeeTRX | TRON Energy Rental - Reduce USDT TRC20 Fees with 0.1 TRX</title>
   <meta name="description" content="Send only 0.1 TRX to receive delegated TRON energy and significantly reduce your USDT TRC20 transfer fees. Simple, secure Hong Kong based service.">
   <meta name="keywords" content="TRON energy rental, TRC20 fee reduction, USDT TRC20 low fee, TRON delegated energy, reduce USDT fees, crypto transaction optimization, LowFeeTRX">
@@ -14,33 +13,15 @@
   <meta property="og:description" content="Send only 0.1 TRX to receive delegated TRON energy and significantly reduce your USDT TRC20 transfer fees.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lowfeetrx.github.io/TRX/">
-  <meta property="og:image" content="https://lowfeetrx.github.io/TRX/og-image.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LowFeeTRX | Reduce USDT TRC20 Fees with 0.1 TRX">
-  <meta name="twitter:description" content="Send only 0.1 TRX to receive delegated TRON energy and lower your fees.">
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://lowfeetrx.github.io/TRX/">
   <link rel="alternate" hreflang="zh-TW" href="https://lowfeetrx.github.io/TRX/zh-tw.html">
   <link rel="alternate" hreflang="zh-CN" href="https://lowfeetrx.github.io/TRX/zh-cn.html">
-  <link rel="alternate" hreflang="x-default" href="https://lowfeetrx.github.io/TRX/">
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LowFeeTRX",
-    "url": "https://lowfeetrx.github.io/TRX/",
-    "description": "TRON energy rental service helping users reduce USDT TRC20 transaction fees",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "HK"
-    }
-  }
-  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -82,12 +63,12 @@
         <p class="text-emerald-700 font-medium mb-3 text-base">TRON Energy Rental Address</p>
         <div class="flex flex-col sm:flex-row items-center gap-3 bg-gray-100 rounded-2xl p-4 text-base font-mono break-all">
           <span class="flex-1 text-center sm:text-left">TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU</span>
-          <button onclick="copyAddress()" 
+          <button onclick="copyAddress(event)" 
                   class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-2xl flex items-center justify-center gap-2 text-base font-medium">
-            <i class="fas fa-copy"></i> Copy TRX Address
+            <i class="fas fa-copy"></i> Copy Address
           </button>
         </div>
-        <p class="text-sm text-gray-500 mt-4">Send 0.1 TRX to this address • Recommended within 15 minutes</p>
+        <p class="text-sm text-gray-500 mt-4">Send 0.1 TRX to this address • Use within 15 minutes</p>
       </div>
     </div>
   </section>
@@ -97,8 +78,8 @@
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-semibold text-center mb-10">Product - TRON Energy Rental</h2>
       <div class="bg-white border rounded-3xl p-8 text-center">
-        <p class="text-lg mb-6">LowFeeTRX provides delegated TRON energy so you can significantly reduce your USDT TRC20 transaction fees.</p>
-        <p class="text-emerald-700 text-2xl font-medium">Send only 0.1 TRX → Get delegated energy instantly</p>
+        <p class="text-lg mb-6">LowFeeTRX provides delegated TRON energy to help you significantly reduce USDT TRC20 transaction fees.</p>
+        <p class="text-emerald-700 text-2xl font-medium">Send 0.1 TRX → Get delegated energy instantly</p>
       </div>
     </div>
   </section>
@@ -193,13 +174,13 @@
   </footer>
 
   <script>
-    function copyAddress() {
+    function copyAddress(e) {
       const addr = "TGv9QmTKpu8D8NDVVriPGb1feMmAxqZ8mU";
       navigator.clipboard.writeText(addr).then(() => {
-        const btn = event.currentTarget;
-        const originalText = btn.innerHTML;
+        const btn = e.currentTarget;
+        const original = btn.innerHTML;
         btn.innerHTML = '✅ Copied!';
-        setTimeout(() => btn.innerHTML = originalText, 2000);
+        setTimeout(() => btn.innerHTML = original, 2000);
       });
     }
 
